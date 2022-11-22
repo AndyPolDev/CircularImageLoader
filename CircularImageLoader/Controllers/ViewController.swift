@@ -11,6 +11,8 @@ class ViewController: UIViewController {
         button.addTarget(self, action: #selector(srartButtonPressed), for: .touchUpInside)
         return button
     }()
+    
+    private let customImageView = CustomImageView(frame: .zero)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,7 @@ class ViewController: UIViewController {
     
     private func setViews() {
         view.addView(startButton)
+        view.addView(customImageView)
     }
     
     @objc private func srartButtonPressed() {
@@ -42,6 +45,13 @@ extension ViewController {
             startButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             startButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.9),
             startButton.heightAnchor.constraint(equalToConstant: 60)
+        ])
+        
+        NSLayoutConstraint.activate([
+            customImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            customImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            customImageView.widthAnchor.constraint(equalToConstant: 600),
+            customImageView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.9)
         ])
     }
 }

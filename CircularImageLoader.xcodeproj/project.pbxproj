@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A15CF526292CF4400082C0E4 /* CircularLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15CF525292CF4400082C0E4 /* CircularLoaderView.swift */; };
+		A15CF529292D010D0082C0E4 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15CF528292D010D0082C0E4 /* CustomImageView.swift */; };
 		A1B483622928DDBB00E0CA64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B483612928DDBB00E0CA64 /* AppDelegate.swift */; };
 		A1B483642928DDBB00E0CA64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B483632928DDBB00E0CA64 /* SceneDelegate.swift */; };
 		A1B483662928DDBB00E0CA64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B483652928DDBB00E0CA64 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A15CF525292CF4400082C0E4 /* CircularLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularLoaderView.swift; sourceTree = "<group>"; };
+		A15CF528292D010D0082C0E4 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		A1B4835E2928DDBB00E0CA64 /* CircularImageLoader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircularImageLoader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1B483612928DDBB00E0CA64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1B483632928DDBB00E0CA64 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +68,16 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		A15CF527292CF45C0082C0E4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A15CF525292CF4400082C0E4 /* CircularLoaderView.swift */,
+				A15CF528292D010D0082C0E4 /* CustomImageView.swift */,
+			);
+			name = Views;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		A1B483552928DDBB00E0CA64 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				A113260A2928DFA1003A93F2 /* Application */,
+				A15CF527292CF45C0082C0E4 /* Views */,
 				A113260B2928DFB4003A93F2 /* Controllers */,
 				A1D8F8EB292A93C1008FDC11 /* Extension */,
 				A113260C2928DFC7003A93F2 /* SupportingFiles */,
@@ -170,6 +185,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1D8F8EA292A93A4008FDC11 /* UIView + Extension.swift in Sources */,
+				A15CF529292D010D0082C0E4 /* CustomImageView.swift in Sources */,
+				A15CF526292CF4400082C0E4 /* CircularLoaderView.swift in Sources */,
 				A1B483662928DDBB00E0CA64 /* ViewController.swift in Sources */,
 				A1B483622928DDBB00E0CA64 /* AppDelegate.swift in Sources */,
 				A1B483642928DDBB00E0CA64 /* SceneDelegate.swift in Sources */,
