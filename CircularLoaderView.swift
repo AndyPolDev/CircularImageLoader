@@ -2,8 +2,8 @@ import UIKit
 
 final class CircularLoaderView: UIView {
     
-    let circularPathLayer = CAShapeLayer()
-    let circularRadius: CGFloat = 20
+    private let circularPathLayer = CAShapeLayer()
+    private let circularRadius: CGFloat = 20
     
     var progress: CGFloat {
         get {

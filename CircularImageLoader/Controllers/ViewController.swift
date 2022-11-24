@@ -1,6 +1,17 @@
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, NetworkImageRequestDelegate {
+    func didUpdateProgress(progress: Int64) {
+        print(progress)
+    }
+    
+    func didUpdateData(imageData: Data) {
+//        let image = UIImage(data: imageData)
+//        DispatchQueue.main.async {
+//            self.customImageView.image = image
+//        }
+        print(imageData)
+    }
     
     private lazy var startButton: UIButton = {
         let button = UIButton(type: .system)
@@ -13,11 +24,12 @@ class ViewController: UIViewController {
     }()
     
     private let customImageView = CustomImageView(frame: .zero)
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor  = .white
         
+        NetworkImageRequest.shared.delegate = self
         setViews()
         setConstraints()
     }
@@ -32,7 +44,7 @@ class ViewController: UIViewController {
     }
     
     @objc private func srartButtonPressed() {
-        print("Hello")
+        NetworkImageRequest.shared.requestData()
     }
 }
 
