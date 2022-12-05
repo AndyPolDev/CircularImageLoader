@@ -1,6 +1,6 @@
 protocol NetworkImageRequestDelegate {
     func didUpdateData(imageData: Data)
-    func didUpdateProgress(progress: Int64)
+    func didUpdateProgress(progress: CGFloat)
 }
 
 import UIKit
@@ -29,7 +29,7 @@ extension NetworkImageRequest: URLSessionDownloadDelegate {
     }
     
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
-        let progress = totalBytesWritten / totalBytesExpectedToWrite
+        let progress = CGFloat(totalBytesWritten) / CGFloat(totalBytesExpectedToWrite)
         delegate?.didUpdateProgress(progress: progress)
     }
 }

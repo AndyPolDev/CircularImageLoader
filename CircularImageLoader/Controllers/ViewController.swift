@@ -1,17 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController, NetworkImageRequestDelegate {
-    func didUpdateProgress(progress: Int64) {
-        print(progress)
-    }
-    
-    func didUpdateData(imageData: Data) {
-//        let image = UIImage(data: imageData)
-//        DispatchQueue.main.async {
-//            self.customImageView.image = image
-//        }
-        print(imageData)
-    }
+class ViewController: UIViewController {
     
     private lazy var startButton: UIButton = {
         let button = UIButton(type: .system)
@@ -48,8 +37,24 @@ class ViewController: UIViewController, NetworkImageRequestDelegate {
     }
 }
 
-//MARK: - Set Constraints
+//MARK: - NetworkImageRequestDelegate
+extension ViewController: NetworkImageRequestDelegate {
+    func didUpdateProgress(progress: CGFloat) {
+        DispatchQueue.main.async {
+            self.customImageView.progressIndicatorView.progress = progress
+        }
+    }
+    
+    func didUpdateData(imageData: Data) {
+        let image = UIImage(data: imageData)
+        DispatchQueue.main.async {
+            self.customImageView.image = image
+            self.customImageView.progressIndicatorView.publicReveal()
+        }
+    }
+}
 
+//MARK: - Set Constraints
 extension ViewController {
     private func setConstraints() {
         NSLayoutConstraint.activate([
@@ -62,7 +67,7 @@ extension ViewController {
         NSLayoutConstraint.activate([
             customImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             customImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            customImageView.widthAnchor.constraint(equalToConstant: 600),
+            customImageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.9),
             customImageView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.9)
         ])
     }

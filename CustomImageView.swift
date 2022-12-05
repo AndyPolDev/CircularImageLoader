@@ -6,7 +6,7 @@ final class CustomImageView: UIImageView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+        contentMode = .scaleAspectFit
         progressIndicatorView.translatesAutoresizingMaskIntoConstraints = false
         setupViews()
         setConstraints()
