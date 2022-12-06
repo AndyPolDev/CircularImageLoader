@@ -111,18 +111,18 @@
 				A15CF527292CF45C0082C0E4 /* Views */,
 				A113260B2928DFB4003A93F2 /* Controllers */,
 				A15CF52C292D10220082C0E4 /* Network */,
-				A1D8F8EB292A93C1008FDC11 /* Extension */,
+				A1D8F8EB292A93C1008FDC11 /* Extensions */,
 				A113260C2928DFC7003A93F2 /* SupportingFiles */,
 			);
 			path = CircularImageLoader;
 			sourceTree = "<group>";
 		};
-		A1D8F8EB292A93C1008FDC11 /* Extension */ = {
+		A1D8F8EB292A93C1008FDC11 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				A1D8F8E9292A93A4008FDC11 /* UIView + Extension.swift */,
 			);
-			path = Extension;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

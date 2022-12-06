@@ -93,7 +93,7 @@ final class CircularLoaderView: UIView {
         pathAnimation.toValue = toPath
         
         let groupAnimation = CAAnimationGroup()
-        groupAnimation.duration = 1
+        groupAnimation.duration = 2
         groupAnimation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
         groupAnimation.animations = [pathAnimation, lineWidthAnimation]
         groupAnimation.delegate = self
