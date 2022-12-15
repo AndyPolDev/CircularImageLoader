@@ -9,11 +9,11 @@ ___
 
 - Проект написан на **UIKit**
 - Верстка интерфейса **Кодом**
-- Стек:
-- **CAShapeLayer**
-- **CATransaction**
-- **CABasicAnimation**
-- **CAAnimationDelegate**
+- **Стек:**
+- *CAShapeLayer*
+- *CATransaction*
+- *CABasicAnimation*
+- *CAAnimationDelegate*
 ___
 
 ## <a id="Presentation"></a>Презентация
