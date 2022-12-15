@@ -8,8 +8,12 @@ ___
 Учебный проект. Анимированная загрузка и отображение "тяжелой" картинки
 
 - Проект написан на **UIKit**
-- Анимация **CoreAnimation**
 - Верстка интерфейса **Кодом**
+- Стек:
+-- **CAShapeLayer**
+-- **CATransaction**
+-- **CABasicAnimation**
+-- **CAAnimationDelegate**
 ___
 
 ## <a id="Presentation"></a>Презентация
